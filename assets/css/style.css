@@ -1,0 +1,412 @@
+/*----------------------------------------------------*/
+/*  PREREQUISITES                                     */
+/*----------------------------------------------------*/
+
+/* target all elements */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	background-color: #fff;
+	color: #252525;
+	font-family: "Lato", "Arial", "san-serif";
+	font-size: 20pz;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
+h2 {
+	position: relative;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	text-align: center;
+	font-weight: 300;
+}
+h3 {
+	font-weight: 300;
+}
+
+h2::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -30px;
+	display: inline-block;
+	width: 90px;
+	height: 5px;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background-color: rgb(241, 137, 1);
+	border-radius: 2px;
+}
+
+header {
+	background: url("../img/hero.jpg") no-repeat center center/cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	text-align: center;
+}
+
+header::before {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* display: block; */
+}
+nav ul {
+	position: absolute;
+	top: 5%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+}
+.logo {
+	position: absolute;
+	/* float: left; */
+	top: 2%;
+	left: 20%;
+	width: 100px;
+	height: 100px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-right: 20px;
+	list-style: none;
+}
+
+.main-nav li a {
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
+}
+
+.hero-text-box {
+	position: absolute;
+	top: 40%;
+	left: 20%;
+	color: #fff;
+	font-size: 35px;
+	font-weight: bold;
+	width: 100%;
+	color: white;
+}
+
+.hero-text-box h1,
+a {
+	text-align: left;
+	display: block;
+}
+
+.btn {
+	width: 190px;
+	text-decoration: none;
+	color: white;
+	background-color: rgb(241, 137, 1);
+	padding: 20px 50px;
+	border-radius: 30px;
+	font-size: 18px;
+	text-align: center;
+}
+
+/* section features */
+.section-features {
+	margin-bottom: 30px;
+}
+
+.long-copy {
+	text-align: left;
+}
+
+.section-features .row:first-child {
+	text-align: center;
+	margin: 0 200px;
+}
+
+.section-features .row:nth-child(2) {
+	margin: 0 150px;
+}
+
+.section-features i {
+	color: rgb(241, 137, 1);
+	font-size: 50px;
+	text-align: left;
+}
+
+.section-features h3 {
+	margin-bottom: 10px;
+}
+
+.section-features .col p {
+	text-align: left;
+	font-size: 0.8em;
+	margin: 10px 0;
+}
+
+/*  meal photo */
+.section-meals {
+	background-color: black;
+}
+
+.meals-showcase {
+	display: flex;
+	/* align-items: flex-start; */
+	flex-wrap: wrap;
+}
+
+.meals-showcase li {
+	list-style: none;
+}
+
+.meals-showcase img {
+	position: relative;
+	display: flex;
+	flex-basis: 20%;
+	/* 1024x814 */
+	/* width: 256px; */
+
+	/* 1440x1110 */
+	width: 360px;
+
+	height: 180px;
+	object-fit: cover;
+	opacity: 0.6;
+}
+
+@media (max-width: 1024px) {
+	.meals-showcase img {
+		width: 256px;
+	}
+}
+
+/* location */
+
+.section-location {
+	padding-bottom: 30px;
+}
+.section-location .row:nth-child(2) {
+	display: flex;
+	justify-content: center;
+}
+.section-location .col {
+	width: 200px;
+	margin-right: 1em;
+}
+
+.section-location img {
+	width: 200px;
+}
+
+.section-location h3 {
+	margin: 5px 0;
+}
+
+.city-feature {
+	color: rgb(241, 137, 1);
+	display: inline-block;
+}
+
+.city-feature a {
+	color: rgb(241, 137, 1);
+	margin-left: 10px;
+	display: inline-block;
+}
+
+/* download app */
+
+.section-steps {
+	background-color: rgb(223, 221, 221);
+	padding: 40px 0;
+}
+
+.section-steps .col:first-child {
+	text-align: right;
+	padding-right: 50px;
+}
+
+.section-steps .col:last-child {
+	text-align: left;
+	padding-left: 50px;
+}
+
+.app-screen {
+	width: 30%;
+	height: 30%;
+}
+
+.btn-app img {
+	width: 170px;
+	height: 48px;
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+}
+
+.works-step {
+	width: 400px;
+	text-align: left;
+	margin: 40px 50px 40px 0;
+}
+
+/* testimonials section */
+.section-testimonials {
+	background: url("../img/back-customers.jpg") no-repeat center center/cover;
+	width: 100%;
+	height: 400px;
+	position: relative;
+	text-align: center;
+	color: white;
+	padding: 10px 50px;
+}
+
+.section-testimonials::before {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.section-testimonials .col {
+	text-align: left;
+}
+
+.section-testimonials img {
+	vertical-align: middle;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.section-testimonials cite {
+	height: 100px;
+	text-align: left;
+	margin-top: 20px;
+}
+
+blockquote {
+	position: relative;
+	padding: 40px 0 8px 15px;
+	box-sizing: border-box;
+	font-style: italic;
+	color: white;
+}
+blockquote:before {
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	left: 3px;
+	content: "“";
+	font-family: sans-serif;
+	color: white;
+	font-size: 90px;
+	line-height: 1;
+}
+blockquote p {
+	padding: 0;
+	margin: 10px 0;
+	line-height: 1.7;
+}
+
+blockquote cite {
+	display: block;
+	text-align: right;
+	color: white;
+	font-size: 0.9em;
+}
+
+/* form */
+.section-form {
+	background: url("../img/logo_alpha.png") no-repeat center center/35%;
+	padding: 30px 0;
+	text-align: center;
+	/* display: flex; */
+}
+
+.section-form .row:nth-child(2) {
+	display: flex;
+	justify-content: center;
+}
+
+.span-1-of-3,
+.span-2-of-3 {
+	text-align: left;
+}
+
+.section-form .span-2-of-3 input,
+select,
+textarea {
+	width: 500px;
+	height: 2em;
+}
+
+.section-form .span-2-of-3 textarea {
+	width: 500px;
+	height: 7em;
+}
+
+.section-form input[type="submit"] {
+	background: rgb(241, 137, 1);
+	color: white;
+	border-radius: 30px;
+	padding: 10px;
+	padding-bottom: 25px;
+	border: none;
+	width: 100px;
+}
+
+/* footer */
+footer {
+	background-color: rgb(241, 137, 1);
+}
+
+footer .footer-nav {
+	/* float: left; */
+	text-align: center;
+}
+
+footer .footer-nav li {
+	display: inline-block;
+	margin: 10px 10px;
+}
+
+footer .footer-nav a {
+	text-decoration: none;
+	color: white;
+}
+
+footer .social-links {
+	/* float: left; */
+	text-align: center;
+}
+
+footer .social-links li {
+	display: inline-block;
+	margin: 10px 10px;
+}
+
+footer .social-links li a {
+	color: white;
+}
+
+footer .row {
+	text-align: center;
+	color: white;
+	padding-bottom: 20px;
+}
